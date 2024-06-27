@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<title>Building My First Computer - A Brief Story</title>
+</head>
+
+<body style="background:black; color:tomato; margin: 80px;">
+<!-- Detailed:-->
+<!-- Here, only HTML & CSS are used to create the narrative.
+Not much use of Javascript.  -->
+<h1 style="text-align:center;">Building My First Computer</h1>
+
+<h2>A Bit of Back Story</h2>
+<p>My first foray into building computers started during my first years in college. I was a sophomore by then and was intrigued about gaming on a desktop computer. Curious about the freedom afforded to <abbr title="Personal Computer">PC</abbr> gamers, through game modding, the lack of needing to pay a subscription to play multiplayer games, and having a machine that does it all (play media, do schoolwork, etc.), I felt it was time to transition to using a <abbr title="Personal Computer">PC</abbr>.<br><br>At the time, I was a diehard Xbox fan, but felt that the ongoing costs of a service called 'Xbox Live Gold' were slowly becoming a cash sink I was no longer willing to pay for. At least with a built computer, gaming was not its sole purpose, productivity would be supported by a new computer. After saving up while working at a deli/pizzeria/cafe on campus at college, I was ready to jump in. </p>
+
+<h2>Scratching the Surface</h2>
+<p>I had already done some preliminary research surrounding the ins and outs of building a computer. Most of this research was just going on YouTube and looking at guide videos made by the most popular tech YouTubers. Slowly but surely I became familiar with the different hardware necessary to build a computer.</p>
+
+<h2>Making a List</h2>
+There were several components to prioritize my budget on. These were the <abbr title="Central Processing Unit">CPU</abbr>, <abbr title="Graphical Processing Unit">GPU</abbr>, and <abbr title="Power Supply Unit">PSU</abbr>. These components are critical to ensure the <abbr title="Personal Computer">PC</abbr> has the capability to run intensive programs. Components like the <abbr title="Random Access Memory">RAM</abbr>, motherboard, case, and <abbr title="Solid State Drive">SSD</abbr> are also essential to ensure the basic computer actually functions and is housed. Of course, there were also necessary peripherals and tools like the monitor, keyboard, mouse, screwdriver set, etc. that I needed to purchase to aid in building. The following is a list of the computer parts that I put together that I ended up purchasing <strong>(click on the parts to reveal them!)</strong>:
+<br></br>
+<!-- Detailed: -->
+<!-- Below, the table showcases the list of parts and their types.
+It is in this section where Javascript begins to be utilized.
+By clicking on the Part Name column, one can make images corresponding
+to that part appear on the colum to the right.
+Additionally, one can make such images disappear by double clicking on it.
+ -->
+<div style="text-align:center;">
+  <table>
+  <tr>
+    <th>Part Type</th>
+    <th>Part Name</th>
+    <th>Part Visuals</th>
+  </tr>
+  <tr>
+    <td id="centralProcessingUnit"><abbr title="Central Processing Unit">CPU</abbr></td>
+    <td onclick=getPic("centralProcessingUnit")>AMD Ryzen 5 2400G</td>
+    <td ondblclick=hidePic("centralProcessingUnit")><img id="centralProcessingUnitPic" src="./Pictures/amd-cpu.png" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="graphicalProcessingUnit"><abbr title="Graphical Processing Unit">GPU</abbr></td>
+    <td onclick=getPic("graphicalProcessingUnit")>Sapphire Pulse RX Vega 56, 8GB VRAM</td>
+    <td ondblclick=hidePic("graphicalProcessingUnit")><img id="graphicalProcessingUnitPic" src="./Pictures/amd-gpu.jpg" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="powerSupplyUnit"><abbr title="Power Supply Unit">PSU</abbr></td>
+    <td onclick=getPic("powerSupplyUnit")>EVGA SuperNOVA 750 G3, 80 Plus Gold 750W</td>
+    <td ondblclick=hidePic("powerSupplyUnit")><img id="powerSupplyUnitPic" src="./Pictures/evga-psu.png" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="randomAccessMemory"><abbr title="Random Access Memory">RAM</abbr></td>
+    <td onclick=getPic("randomAccessMemory")>Corsair Vengeance LPX 16 GB, DDR4 DRAM 3200MHz</td>
+    <td ondblclick=hidePic("randomAccessMemory")><img id="randomAccessMemoryPic" src="./Pictures/corsair-ram.jpg" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="memoryDrive">Memory Drive</td>
+    <td onclick=getPic("memoryDrive")>WD Blue 3D NAND 250GB PC SSD</td>
+    <td ondblclick=hidePic("memoryDrive")><img id="memoryDrivePic" src="./Pictures/wd-ssd.jpg" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="motherboard">Motherboard</td>
+    <td onclick=getPic("motherboard")>MSI B450I Gaming Plus AC</td>
+    <td ondblclick=hidePic("motherboard")> <img id="motherboardPic" src="./Pictures/msi-mb.jpg" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="case">Case</td>
+    <td onclick=getPic("case")>NZXT H200, Mini-ITX PC Gaming Case</td>
+    <td ondblclick=hidePic("case")><img id="casePic" src="./Pictures/NZXT_H200_Case.jpg" style="width:200px; display: none;"> </td>
+  </tr>
+  <tr>
+    <td id="cooler">Cooler</td>
+    <td onclick=getPic("cooler")>Thermalright Peerless Assassin 120 SE CPU Air Cooler</td>
+    <td ondblclick=hidePic("cooler")><img id="coolerPic" src="./Pictures/cpu-cooler.jpg" style="width:200px; display: none;"> </td>
+  </tr>
+</table>
+</div>
+<br></br>
+<!-- Detailed: -->
+<!-- Below, to highlight the actual computer build that came together,
+users can click on the "Assemble" button to show the picture.
+Similarly, clicking the "Disassemble" button hides the picture.
+ -->
+<div style="text-align:center;">
+    <h2>Time to Assemble</h2>
+    <button id="assemble" value="assemble" onclick=getPic("assemble");>Assemble</button>
+    <button id="assemble" value="assemble"; onclick=hidePic("assemble")>Disassemble</button>
+
+<p ondblclick=hidePic("assemble")><img id="assemblePic" src="./Pictures/assembled-build.jpg"  style= "width:500px; display:none; margin-left:auto; margin-right: auto;"
+  width: 50%;"> </p>
+</div>
+
+</body>
+<script src="./script.js"></script>
+</html>
+
+
